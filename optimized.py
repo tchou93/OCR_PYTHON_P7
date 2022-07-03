@@ -152,10 +152,10 @@ def display_results_algo(path_csv: str):
 
 
 if __name__ == "__main__":
-    PRECISION = 0
-    display_results_algo("./datas/dataset_20_actions.csv")
-
     PRECISION = 2
     display_results_algo("./datas/dataset_20_actions.csv")
     display_results_algo("./datas/dataset1_1001_actions.csv")
     display_results_algo("./datas/dataset2_1000_actions.csv")
+
+    PRECISION = 3
+    display_results_algo("./datas/dataset_20_actions.csv")

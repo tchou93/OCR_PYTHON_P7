@@ -2,6 +2,7 @@ from typing import List, Tuple
 import csv
 import time
 
+# Global variable
 CLIENT_BUDGET = 500
 
 
