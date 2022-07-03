@@ -20,6 +20,10 @@ class Action:
         self.purchase_price_euros = purchase_price_euros
         self.rentability_2y_euros = rentability_2y_euros
 
+    # @property
+    # def purchase_price_euros(self):
+    #     return self.name * self.rentability_2y_euros
+
     def __repr__(self):
         return f"{self.name}"
 
@@ -64,7 +68,7 @@ def find_best_combination(actions: List[Action]) -> Tuple[List[Action], float, f
 
     # Check all the combinations (0: not buy, 1:buy) of actions
     # to keep the best in term of rentability in 2 years.
-    for actions_tobuy in range(1, (pow(2, len(actions)))):
+    for actions_tobuy in range(1, (pow(2, len(actions)) + 1)):
         rentability_actions_tmp = 0
         purchase_price_euros_actions_tmp = 0
         actions_choosed_tmp = []
@@ -106,7 +110,7 @@ if __name__ == "__main__":
     the time of execution.
     """
 
-    actions = read_csv("./files/dataset_20_actions.csv")
+    actions = read_csv("./datas/dataset_20_actions.csv")
     start = time.time()
     (
         actions_choosed,
