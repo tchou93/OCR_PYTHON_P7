@@ -95,7 +95,7 @@ def algo_optimized(a: List[Action], c: int) -> List[Action]:
     # When the capacity is equal 0 or all the actions
     # have been checked then we have the list of the actions
     # we need to buy.
-    while c_tmp != 0 and current_action != 0:
+    while c_tmp >= 0 and current_action >= 0:
         current_value_action = a[current_action - 1].benefits_2y
         last_value_optimized = matrix[current_action - 1][
             c_tmp - a[current_action - 1].price
